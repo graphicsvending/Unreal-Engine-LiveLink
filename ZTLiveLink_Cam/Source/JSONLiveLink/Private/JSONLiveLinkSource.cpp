@@ -237,9 +237,9 @@ void FJSONLiveLinkSource::HandleReceivedData(TSharedPtr<TArray<uint8>, ESPMode::
 				//------------------------------------------------------------------------------------------------------------------------------//
 
 				CameraFrameData.Transform = FTransform(Quaternion, Translation, Scale);
-				// CameraFrameData.FocalLength = Data6;
-				// CameraFrameData.FocusDistance = Data7;
-				// CameraFrameData.Aperture = Data8;
+				CameraFrameData.FocalLength = Data6;
+				CameraFrameData.FocusDistance = Data7;
+				CameraFrameData.Aperture = Data8;
 				Client->PushSubjectFrameData_AnyThread({ SourceGuid, SubjectName }, MoveTemp(CameraFrameDataStruct));
 			}
 		}
