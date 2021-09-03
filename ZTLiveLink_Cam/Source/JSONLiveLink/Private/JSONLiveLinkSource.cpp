@@ -183,9 +183,9 @@ void FJSONLiveLinkSource::HandleReceivedData(TSharedPtr<TArray<uint8>, ESPMode::
 			{
 				FLiveLinkStaticDataStruct StaticDataStruct = FLiveLinkStaticDataStruct(FLiveLinkCameraStaticData::StaticStruct());
 				FLiveLinkCameraStaticData& StaticData = *StaticDataStruct.Cast<FLiveLinkCameraStaticData>();
-				// StaticData.bIsFocalLengthSupported = true;
-				// StaticData.bIsFocusDistanceSupported = true;
-				// StaticData.bIsApertureSupported = true;
+				StaticData.bIsFocalLengthSupported = true;
+				StaticData.bIsFocusDistanceSupported = true;
+				StaticData.bIsApertureSupported = true;
 
 				Client->PushSubjectStaticData_AnyThread({ SourceGuid, SubjectName }, ULiveLinkCameraRole::StaticClass(), MoveTemp(StaticDataStruct));
 				EncounteredSubjects.Add(SubjectName);
