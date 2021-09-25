@@ -216,10 +216,10 @@ void FJSONLiveLinkSource::HandleReceivedData(TSharedPtr<TArray<uint8>, ESPMode::
 					double Data3 = (*DataArray)[3]->AsNumber();
 					double Data4 = (*DataArray)[4]->AsNumber();
 					double Data5 = (*DataArray)[5]->AsNumber();
-					double Data6 = (*DataArray)[0]->AsNumber();
-					double Data7 = (*DataArray)[1]->AsNumber();
-					double Data8 = (*DataArray)[2]->AsNumber();
-					double Data9 = (*DataArray)[3]->AsNumber();
+					double Data6 = (*DataArray)[6]->AsNumber();
+					double Data7 = (*DataArray)[7]->AsNumber();
+					double Data8 = (*DataArray)[8]->AsNumber();
+					double Data9 = (*DataArray)[9]->AsNumber();
 
 					Translation = FVector(Data0, Data1, Data2);	
 					Euler = FVector(Data3, Data4, Data5);
@@ -242,7 +242,7 @@ void FJSONLiveLinkSource::HandleReceivedData(TSharedPtr<TArray<uint8>, ESPMode::
 				CameraFrameData.Aperture = Data8;
 				Client->PushSubjectFrameData_AnyThread({ SourceGuid, SubjectName }, MoveTemp(CameraFrameDataStruct));
 			}
-		}
+		}p
 	}
 
 }
