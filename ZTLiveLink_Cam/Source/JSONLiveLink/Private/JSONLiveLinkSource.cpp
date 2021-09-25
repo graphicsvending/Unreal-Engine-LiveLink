@@ -242,7 +242,7 @@ void FJSONLiveLinkSource::HandleReceivedData(TSharedPtr<TArray<uint8>, ESPMode::
 				CameraFrameData.Aperture = Data8;
 				Client->PushSubjectFrameData_AnyThread({ SourceGuid, SubjectName }, MoveTemp(CameraFrameDataStruct));
 			}
-		}p
+		}
 	}
 
 }
