@@ -16,8 +16,7 @@ yaw = 0
 
 
 def udp_data_sender():
-    MESSAGE = '{"'+SubjectName+'":{"UserData":['+str(XX)+','+str(YY)+','+str(
-        ZZ)+','+str(roll)+','+str(pitch)+','+str(yaw)+',0,0,0,0]}}'
+    MESSAGE = '{"'+SubjectName+'":{"UserData":['+str(XX)+','+str(YY)+','+str(ZZ)+','+str(roll)+','+str(pitch)+','+str(yaw)+',0,0,0,0]}}'
     BUFFER = bytes(MESSAGE, "utf-8")
     sock.sendto(BUFFER, (UDP_IP, UDP_PORT))
 
