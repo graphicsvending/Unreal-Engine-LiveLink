@@ -15,6 +15,7 @@ roll = 0
 pitch = 0
 yaw = 0
 
+frame = 1
 
 def udp_data_sender():
     MESSAGE = '{"'+SubjectName+'":{"UserData":['+str(XX)+','+str(YY)+','+str(ZZ)+','+str(roll)+','+str(pitch)+','+str(yaw)+',0,0,0,0]}}'
