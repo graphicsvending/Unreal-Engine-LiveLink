@@ -33,12 +33,12 @@ while True:
     if ZZ > 180:
         ZZ = 20
     else:
-        ZZ = ZZ + 0.0005
+        ZZ = ZZ + 1
 
     if yaw > 90:
         yaw = -90
     else:
-        yaw = yaw + 0.0005
+        yaw = yaw + 1
 
     udp_data_sender()
 
