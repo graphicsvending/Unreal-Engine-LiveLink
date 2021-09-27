@@ -1,4 +1,5 @@
 import socket
+import time
 
 UDP_IP = "127.0.0.1"
 UDP_PORT = 54321
@@ -24,6 +25,10 @@ def udp_data_sender():
 
 while True:
 
+    frame += 1
+    if frame > 24:
+        frame = 1
+
     if ZZ > 180:
         ZZ = 20
     else:
@@ -35,3 +40,5 @@ while True:
         yaw = yaw + 0.0005
 
     udp_data_sender()
+
+    time.sleep(.0416)
