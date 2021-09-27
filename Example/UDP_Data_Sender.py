@@ -15,7 +15,7 @@ roll = 0
 pitch = 0
 yaw = 0
 
-# frame = 1
+frame = 1
 
 def udp_data_sender():
     MESSAGE = '{"'+SubjectName+'":{"UserData":['+str(XX)+','+str(YY)+','+str(ZZ)+','+str(roll)+','+str(pitch)+','+str(yaw)+',0,0,0,0]}}'
@@ -26,9 +26,9 @@ def udp_data_sender():
 
 while True:
 
-#     frame += 1
-#     if frame > 24:
-#         frame = 1
+    frame += 1
+    if frame > 50:
+        frame = 1
 
     if ZZ > 180:
         ZZ = 20
@@ -42,4 +42,4 @@ while True:
 
     udp_data_sender()
 
-#     time.sleep(.0416)
+    time.sleep(.02)
